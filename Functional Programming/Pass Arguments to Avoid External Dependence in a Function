@@ -1,0 +1,16 @@
+// The global variable
+let fixedValue = 4;
+
+// Only change code below this line
+function incrementer(value) {
+if (value ){
+
+ var r = value +1;
+ return r;
+ 
+}
+
+
+
+  // Only change code above this line
+}
