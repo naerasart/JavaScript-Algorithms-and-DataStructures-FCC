@@ -1,0 +1,9 @@
+// Only change code below this line
+function urlSlug(title) {
+var r= title.trim().split(/\s+/);
+var x=r.join("-").toLowerCase();
+return x;
+
+}
+// Only change code above this line
+urlSlug("A Mind Needs Books Like A Sword Needs A Whetstone");
