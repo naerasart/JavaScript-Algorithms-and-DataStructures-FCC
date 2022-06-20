@@ -1,0 +1,11 @@
+function splitify(str) {
+  // Only change code below this line
+
+ 
+ 
+const byDigits = str.split(/\W/);
+return byDigits;
+  // Only change code above this line
+}
+
+splitify("Hello World,I-am code");
