@@ -1,0 +1,7 @@
+function booWho(bool) {
+ var x=true;
+ if(bool===true|| bool===false){x= true;} else { x=false;}
+ return x;
+}
+
+booWho(null);
