@@ -1,0 +1,5 @@
+function truncateString(str, num) { var x="";
+ if (  (str.length-num)>0) { x= str.substr(0, num)+"...";
+} else {  x=str;}return x;}
+
+truncateString("A-tisket a-tasket A green and yellow basket", 8);
