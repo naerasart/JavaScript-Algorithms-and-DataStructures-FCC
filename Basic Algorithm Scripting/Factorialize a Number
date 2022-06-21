@@ -1,0 +1,11 @@
+function factorialize(num) {
+  let result;
+
+  for (let n=0; n<=num  ; n++){
+    if (n==0){ result=1;}
+    else{ result *= n;}
+  }
+   return result;
+}
+
+factorialize(5);
