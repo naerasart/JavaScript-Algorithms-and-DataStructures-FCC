@@ -1,0 +1,17 @@
+function sumAll(arr,x,y) {
+  x=arr[0];
+  y=arr[1];
+  var r=0;
+  for (let i=x; i<y; i++){
+    if (y-x>0){
+    
+       
+     r=((y + x) * (y - x + 1)) / 2;
+       
+
+    }  }
+    for (let i=y; i<x; i++){
+    if (x-y>0){
+    
+       
+     r=((x + y) * (x - y + 1)) / 2;
