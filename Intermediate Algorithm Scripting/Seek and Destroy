@@ -1,0 +1,9 @@
+function destroyer(arr,...item) {
+ 
+   var x=[];
+    x=arr.filter(item1 => item.includes(item1)<=0  );
+   
+    console.log(x);
+    return x;
+}
+ destroyer([1, 2, 3, 1, 2, 3], 2, 3);
