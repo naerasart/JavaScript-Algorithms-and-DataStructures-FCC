@@ -1,0 +1,17 @@
+function whatIsInAName(collection, source) {
+  //const arr = [];
+  
+ const r= Object.getOwnPropertyNames(source); 
+
+  // filter the collection
+var x=  collection.filter(obj => r
+      .map(key =>  obj[key] === source[key])
+      .reduce((a, b) => a && b));
+ console.log(x);
+ return x; 
+     
+  // Only change code above this line
+ // return arr;
+}
+
+whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
