@@ -1,0 +1,14 @@
+function pairElement(str) {
+  
+  var r = str.split("");
+  var y = [];   var x;
+  for (let i = 0; i < r.length; i++)
+  if (r[i] === "C"){x="G";y.push(["C",x]);} 
+ else   if (r[i] === "G"){ x="C";y.push(["G",x]);}
+  else if (r[i] === "A"){x="T";y.push(["A",x]);} 
+  else if (r[i] === "T"){x="A";y.push(["T",x]);} 
+  console.log(y);
+  return y;  
+}
+
+pairElement("GCG");
