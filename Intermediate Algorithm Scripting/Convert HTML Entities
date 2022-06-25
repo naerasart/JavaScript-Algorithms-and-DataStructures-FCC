@@ -1,0 +1,26 @@
+function convertHTML(str) {
+ var a = str.split("");
+ for (let i=0; i<a.length; i++){
+    
+   if (a[i]==="<") {
+      a[i]="&lt;";   }
+  else if  (a[i]==="&") {
+      a[i]="&amp;";     }
+  else if  (a[i]===">") {
+       a[i]="&gt;";   }
+ else if  (a[i]==='"') {
+        a[i]="&quot;";}
+ else if  (a[i]==="'") {
+         a[i]="&apos;";}  
+   
+   
+   }  
+ return a.join("");
+  
+  
+}  
+  
+
+convertHTML("Dolce & Gabbana");
+convertHTML("<>");
+convertHTML("abc");
