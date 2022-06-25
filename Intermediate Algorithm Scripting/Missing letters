@@ -1,0 +1,11 @@
+function fearNotLetter(str) {
+var alpha=str;
+for (let i=0; i<alpha.length; i++){
+   var a=alpha.charCodeAt(i);
+    var b=alpha.charCodeAt(0);
+ var c;
+     if (a - b > i) {
+      return String.fromCharCode(a - 1 );
+    }  
+  } 
+}
