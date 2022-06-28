@@ -1,0 +1,14 @@
+function sumPrimes(num) {
+ 
+  let arr = [];
+  for (let i = 2; i <= num; i++) {
+    if (arr.every((x) => i % x >=1))
+       arr.push(i);
+  }
+  return arr.reduce((a, b) => a + b);
+}
+
+   
+
+
+sumPrimes(10);
