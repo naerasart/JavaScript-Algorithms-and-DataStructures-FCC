@@ -1,0 +1,20 @@
+function sumFibs(num) {
+  var arr = [1,1];
+var d;
+
+for (var j =2; j < num; j++){
+arr[j] = arr[j-2] + arr[j-1];
+}
+ 
+return arr.filter( x=>{
+return x%2 >=1 && x <= num;
+}).reduce( (a, b)=>{
+return a+b;
+});
+
+  
+}
+
+
+
+sumFibs(4);
