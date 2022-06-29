@@ -1,18 +1,14 @@
 function addTogether(arg1, arg2) {
-  
+  var x;
   
   if (typeof(arg1) == "number" && typeof(arg2) == "number")
-    {return arg1 + arg2;}
+    {x= arg1 + arg2;}
 
  else  if (typeof(arg1) != "number" && typeof(arg2) != "number")    
-   {return undefined;}
+   {x= undefined;}
    
   else if (arg2 === undefined)
-   { return (arg2) => addTogether(arg1,arg2);}
+   { x= (arg2) => addTogether(arg1,arg2);} return x;
      
 }
    
-  
-
-
-addTogether(2,3);
