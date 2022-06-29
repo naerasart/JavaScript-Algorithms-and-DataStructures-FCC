@@ -1,0 +1,16 @@
+function smallestCommons(arr) {
+
+ const [min, max] = arr.sort((a, b) => a - b);
+  var scm = max;
+
+  for(var i = max; i >= min; i--){
+    if(scm % i == 0){
+      
+    scm+=0;  i==i;
+    } else{   scm += max;  
+      i = max;}
+  }
+console.log(i);
+console.log(scm);
+  return scm;  
+}
