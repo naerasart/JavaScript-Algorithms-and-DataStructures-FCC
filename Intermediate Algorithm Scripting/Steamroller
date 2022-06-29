@@ -1,0 +1,11 @@
+function steamrollArray(arr) {
+let flatArray = [].concat(...arr);
+var x;
+if (flatArray.some(Array.isArray)){x= steamrollArray(flatArray);} //repeat the process to flatten more levels of arrays if present
+else{ x=flatArray;// return the flattened array
+}
+return x;
+  
+}
+
+steamrollArray([1, [2], [3, [[4]]]]);
