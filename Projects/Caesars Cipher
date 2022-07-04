@@ -1,0 +1,26 @@
+function rot13(str) {
+   
+  //Deciphered reference letters
+  let alpha = {
+    A: 'N', B: 'O', C: 'P',
+    D: 'Q', E: 'R', F: 'S',
+    G: 'T', H: 'U', I: 'V',
+    J: 'W', K: 'X', L: 'Y',
+    M: 'Z', N: 'A', O: 'B',
+    P: 'C', Q: 'D', R: 'E',
+    S: 'F', T: 'G', U: 'H',
+    V: 'I', W: 'J', X: 'K',
+    Y: 'L', Z: 'M'," ":" ", "-": "-", "_":"_", ".":".", "&":"&","?":"?", "!": "!", "@":"@", "#":"#", "/": "/"
+  }
+   
+  //decipher the code
+  let final = [];
+  for(let i = 0 ; i < str.length; i++){
+    final.push(alpha[str[i]]);
+  }var c=final.join("");
+ console.log(c); 
+  //return the output
+  return c;
+}
+
+rot13("SERR PBQR PNZC");
