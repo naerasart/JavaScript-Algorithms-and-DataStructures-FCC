@@ -1,6 +1,6 @@
 function rot13(str) {
    
-  //Deciphered reference letters
+   
   let alpha = {
     A: 'N', B: 'O', C: 'P',
     D: 'Q', E: 'R', F: 'S',
@@ -13,13 +13,13 @@ function rot13(str) {
     Y: 'L', Z: 'M'," ":" ", "-": "-", "_":"_", ".":".", "&":"&","?":"?", "!": "!", "@":"@", "#":"#", "/": "/"
   }
    
-  //decipher the code
+   
   let final = [];
   for(let i = 0 ; i < str.length; i++){
     final.push(alpha[str[i]]);
   }var c=final.join("");
  console.log(c); 
-  //return the output
+  
   return c;
 }
 
