@@ -1,0 +1,35 @@
+function checkCashRegister(price, cash, cid) {
+  var difference = cash - price;  
+  var newcid= cid.reverse();
+  var totalcid=0 ,moneyBack, finalback =[],b,a, currencycid=[];
+  
+var currency  = [["PENNY", 0.01],["NICKEL", 0.05] , ["DIME", 0.1],["QUARTER", 0.25],["ONE", 1],["FIVE", 5] , ["TEN", 10] , ["TWENTY", 20],["ONE HUNDRED", 100]]; 
+var arr= currency.reverse();
+
+  
+ for(let i = 0; i<newcid.length; i++){
+     moneyBack = 0; b=[...arr ][i][1];      
+     totalcid += newcid[i][1]; 
+     currencycid = newcid[i][1]/b;      
+              
+    while(difference.toFixed(2)>=b && currencycid>0){
+        difference -= b;
+        moneyBack += b;
+       currencycid--;  }
+    
+    if(moneyBack>0)
+     {b=[...arr ][i][1]= moneyBack;          
+     finalback.push([...arr][i]); 
+      } 
+ }
+   
+if(difference>0)   
+  {return{status: 'INSUFFICIENT_FUNDS', change: []}}
+else if(totalcid -[cash - price]==0)    
+  {return{status: 'CLOSED', change: newcid.reverse()}} 
+return {status: 'OPEN', change: finalback}    
+}
+
+checkCashRegister(19.5, 20, [["PENNY", 1.01], ["NICKEL", 2.05], ["DIME", 3.1], ["QUARTER", 4.25], ["ONE", 90], ["FIVE", 55], ["TEN", 20], ["TWENTY", 60], ["ONE HUNDRED", 100]]);
+
+//Reference: https://codeshare.io/X8oNE8
